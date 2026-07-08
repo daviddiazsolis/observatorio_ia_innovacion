@@ -2,6 +2,7 @@
 import { motion } from 'motion/react'
 import { Microscope, GraduationCap, Rocket } from 'lucide-react'
 import { useLanguage } from '../context/LanguageContext'
+import SectionHeading from './SectionHeading'
 
 const VALUES = [
   { key: 'misionValue1', icon: Microscope },
@@ -13,17 +14,18 @@ export default function Mision() {
   const { t } = useLanguage()
 
   return (
-    <section id="mision" className="py-16 px-6 max-w-7xl mx-auto border-t border-zinc-800/50 scroll-mt-24">
-      <motion.div
+    <section id="mision" className="py-24 px-6 max-w-7xl mx-auto scroll-mt-20">
+      <SectionHeading eyebrow="01 · Misión" title={t('misionTitle')} subtitle={t('misionSubtitle')} />
+
+      <motion.p
         initial={{ opacity: 0, y: 16 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
+        className="mx-auto max-w-3xl text-center text-lg leading-relaxed text-zinc-300 mb-14"
       >
-        <h2 className="text-3xl font-bold text-zinc-100 mb-2">{t('misionTitle')}</h2>
-        <p className="text-zinc-400 mb-8">{t('misionSubtitle')}</p>
-        <p className="text-lg text-zinc-300 leading-relaxed max-w-3xl mb-12">{t('misionBody')}</p>
-      </motion.div>
+        {t('misionBody')}
+      </motion.p>
 
       <div className="grid gap-5 sm:grid-cols-3">
         {VALUES.map(({ key, icon: Icon }, i) => (
@@ -33,12 +35,12 @@ export default function Mision() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: i * 0.08 }}
-            className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6"
+            className="rounded-2xl border border-zinc-800/80 bg-zinc-900/30 p-6 transition-colors hover:border-zinc-700"
           >
-            <div className="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mb-4">
-              <Icon className="w-5 h-5 text-emerald-400" />
+            <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5">
+              <Icon className="h-5 w-5 text-fuchsia-300" />
             </div>
-            <h3 className="text-lg font-semibold text-zinc-100 mb-1.5">{t(`${key}Title`)}</h3>
+            <h3 className="font-display text-lg font-semibold text-zinc-100 mb-1.5">{t(`${key}Title`)}</h3>
             <p className="text-sm text-zinc-400 leading-relaxed">{t(`${key}Desc`)}</p>
           </motion.div>
         ))}

@@ -45,16 +45,16 @@ function SectionNav() {
   }, [])
 
   return (
-    <nav className="sticky top-0 z-40 bg-zinc-950/90 backdrop-blur border-b border-zinc-800/60">
-      <div className="max-w-7xl mx-auto px-6 flex gap-1 overflow-x-auto py-2 no-scrollbar">
+    <nav className="sticky top-0 z-40 bg-zinc-950/80 backdrop-blur border-b border-zinc-800/60">
+      <div className="max-w-7xl mx-auto px-6 flex gap-1 overflow-x-auto py-2.5 no-scrollbar">
         {SECTIONS.map(({ id, navKey }) => (
           <a
             key={id}
             href={`#${id}`}
             onClick={e => { e.preventDefault(); document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' }) }}
-            className={`px-3 py-1.5 rounded-lg text-sm font-medium whitespace-nowrap transition-colors ${
+            className={`px-3.5 py-1.5 rounded-full text-sm font-medium whitespace-nowrap transition-colors ${
               active === id
-                ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/30'
+                ? 'bg-white/10 text-white border border-white/15'
                 : 'text-zinc-500 hover:text-zinc-200'
             }`}
           >

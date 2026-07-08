@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: Apache-2.0
 import { motion } from 'motion/react'
-import { Sparkles, ArrowRight, BarChart3 } from 'lucide-react'
+import { ArrowRight, BarChart3 } from 'lucide-react'
 import { useLanguage } from '../context/LanguageContext'
 
 export default function Hero() {
@@ -10,43 +10,54 @@ export default function Hero() {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
 
   return (
-    <section className="relative py-24 px-6 overflow-hidden border-b border-zinc-800/50">
-      {/* Background grid */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#27272a22_1px,transparent_1px),linear-gradient(to_bottom,#27272a22_1px,transparent_1px)] bg-[size:48px_48px] pointer-events-none" />
-      {/* Emerald glow */}
-      <div className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-emerald-500/10 blur-3xl pointer-events-none" />
+    <section className="relative isolate overflow-hidden bg-[#0a0a0c] px-6 pt-32 pb-24 sm:pt-40 sm:pb-32">
+      {/* ── Aurora background ─────────────────────────────────────── */}
+      <div className="pointer-events-none absolute inset-0 -z-10">
+        {/* violet blob, upper-left */}
+        <div className="absolute -top-40 -left-24 h-[38rem] w-[38rem] rounded-full bg-indigo-600/25 blur-[120px]" />
+        {/* rose blob, upper-right */}
+        <div className="absolute -top-40 -right-24 h-[38rem] w-[38rem] rounded-full bg-rose-600/20 blur-[120px]" />
+        {/* fuchsia center glow */}
+        <div className="absolute top-0 left-1/2 h-[26rem] w-[48rem] -translate-x-1/2 rounded-full bg-fuchsia-600/15 blur-[130px]" />
+        {/* faint dot grid */}
+        <div className="absolute inset-0 bg-[radial-gradient(#ffffff10_1px,transparent_1px)] bg-[size:26px_26px] [mask-image:radial-gradient(ellipse_at_center,black,transparent_75%)]" />
+      </div>
 
-      <div className="relative max-w-7xl mx-auto">
+      <div className="relative mx-auto max-w-4xl text-center">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.6 }}
         >
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-xs font-medium mb-6">
-            <Sparkles className="w-3.5 h-3.5" />
+          <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-medium text-zinc-300 backdrop-blur">
+            <span className="h-1.5 w-1.5 rounded-full bg-fuchsia-400" />
             {t('heroBadge')}
           </div>
 
-          <h1 className="text-5xl sm:text-6xl font-bold text-zinc-100 mb-5 leading-tight max-w-4xl">
-            {t('heroTitle')}
+          <h1 className="font-display text-5xl font-semibold leading-[1.05] tracking-tight text-white sm:text-7xl">
+            {t('heroTitleA')} <span className="text-aurora">{t('heroTitleB')}</span>
           </h1>
-          <p className="text-xl text-emerald-400 font-medium mb-4 max-w-3xl">{t('heroSubtitle')}</p>
-          <p className="text-zinc-400 max-w-2xl text-lg leading-relaxed mb-10">{t('heroDesc')}</p>
+
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-zinc-400 sm:text-xl">
+            {t('heroDesc')}
+          </p>
 
           {/* CTAs */}
-          <div className="flex flex-wrap gap-3">
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <button
               onClick={() => scrollTo('recursos')}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-emerald-500 text-zinc-950 font-medium hover:bg-emerald-400 transition-colors"
+              className="btn-gradient"
             >
-              {t('heroCta1')} <ArrowRight className="w-4 h-4" />
+              <span>
+                {t('heroCta1')} <ArrowRight className="h-4 w-4" />
+              </span>
             </button>
             <button
               onClick={() => scrollTo('estado')}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-zinc-700 text-zinc-200 font-medium hover:border-zinc-500 hover:text-zinc-100 transition-colors"
+              className="inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-2.5 font-medium text-zinc-200 transition-colors hover:border-white/30 hover:text-white"
             >
-              <BarChart3 className="w-4 h-4" /> {t('heroCta2')}
+              <BarChart3 className="h-4 w-4" /> {t('heroCta2')}
             </button>
           </div>
         </motion.div>

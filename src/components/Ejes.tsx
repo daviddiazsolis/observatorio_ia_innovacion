@@ -2,6 +2,7 @@
 import { motion } from 'motion/react'
 import { GraduationCap, TrendingUp, Microscope, Building2 } from 'lucide-react'
 import { useLanguage } from '../context/LanguageContext'
+import SectionHeading from './SectionHeading'
 
 const EJES = [
   { key: 'eje1', icon: GraduationCap, featured: true },
@@ -14,16 +15,8 @@ export default function Ejes() {
   const { t } = useLanguage()
 
   return (
-    <section id="ejes" className="py-16 px-6 max-w-7xl mx-auto border-t border-zinc-800/50 scroll-mt-24">
-      <motion.div
-        initial={{ opacity: 0, y: 16 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
-      >
-        <h2 className="text-3xl font-bold text-zinc-100 mb-2">{t('ejesTitle')}</h2>
-        <p className="text-zinc-400 mb-8">{t('ejesSubtitle')}</p>
-      </motion.div>
+    <section id="ejes" className="py-24 px-6 max-w-7xl mx-auto scroll-mt-20">
+      <SectionHeading eyebrow="02 · Ejes" title={t('ejesTitle')} subtitle={t('ejesSubtitle')} />
 
       <div className="grid gap-5 sm:grid-cols-2">
         {EJES.map(({ key, icon: Icon, featured }, i) => (
@@ -33,29 +26,29 @@ export default function Ejes() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: i * 0.08 }}
-            className={`rounded-2xl border p-6 ${
+            className={`rounded-2xl border p-7 transition-colors ${
               featured
-                ? 'border-emerald-500/40 bg-emerald-500/5'
-                : 'border-zinc-800 bg-zinc-900/40'
+                ? 'border-fuchsia-500/30 bg-fuchsia-500/[0.04] glow-ring'
+                : 'border-zinc-800/80 bg-zinc-900/30 hover:border-zinc-700'
             }`}
           >
-            <div className="flex items-center gap-3 mb-3">
+            <div className="mb-4 flex items-center gap-3">
               <div
-                className={`w-10 h-10 rounded-lg flex items-center justify-center ${
+                className={`flex h-11 w-11 items-center justify-center rounded-xl border ${
                   featured
-                    ? 'bg-emerald-500/20 border border-emerald-500/30'
-                    : 'bg-zinc-800/60 border border-zinc-700'
+                    ? 'border-fuchsia-500/30 bg-fuchsia-500/10'
+                    : 'border-white/10 bg-white/5'
                 }`}
               >
-                <Icon className={`w-5 h-5 ${featured ? 'text-emerald-400' : 'text-zinc-300'}`} />
+                <Icon className={`h-5 w-5 ${featured ? 'text-fuchsia-300' : 'text-zinc-300'}`} />
               </div>
               {featured && (
-                <span className="text-xs font-medium px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                <span className="rounded-full border border-fuchsia-500/30 bg-fuchsia-500/10 px-2.5 py-0.5 text-xs font-medium text-fuchsia-200">
                   {t('eje1Featured')}
                 </span>
               )}
             </div>
-            <h3 className="text-lg font-semibold text-zinc-100 mb-1.5">{t(`${key}Title`)}</h3>
+            <h3 className="font-display text-xl font-semibold text-zinc-100 mb-1.5">{t(`${key}Title`)}</h3>
             <p className="text-sm text-zinc-400 leading-relaxed">{t(`${key}Desc`)}</p>
           </motion.div>
         ))}

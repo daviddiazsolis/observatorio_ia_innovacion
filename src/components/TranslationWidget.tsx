@@ -24,7 +24,7 @@ export default function TranslationWidget() {
         <button
           onClick={() => setLanguage('es')}
           className={`px-3 py-1 rounded text-sm font-medium transition-colors ${
-            language === 'es' ? 'bg-emerald-500 text-zinc-950' : 'text-zinc-400 hover:text-zinc-100'
+            language === 'es' ? 'bg-white text-zinc-950' : 'text-zinc-400 hover:text-zinc-100'
           }`}
         >
           {t('langEs')}
@@ -32,7 +32,7 @@ export default function TranslationWidget() {
         <button
           onClick={() => setLanguage('en')}
           className={`px-3 py-1 rounded text-sm font-medium transition-colors ${
-            language === 'en' ? 'bg-emerald-500 text-zinc-950' : 'text-zinc-400 hover:text-zinc-100'
+            language === 'en' ? 'bg-white text-zinc-950' : 'text-zinc-400 hover:text-zinc-100'
           }`}
         >
           {t('langEn')}

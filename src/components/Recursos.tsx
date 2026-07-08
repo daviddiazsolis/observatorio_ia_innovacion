@@ -2,6 +2,7 @@
 import { motion } from 'motion/react'
 import { PlayCircle, ArrowRight, BookOpen, BookMarked, Video } from 'lucide-react'
 import { useLanguage } from '../context/LanguageContext'
+import SectionHeading from './SectionHeading'
 
 const RESOURCES = [
   { key: 'recurso1', icon: BookOpen },
@@ -13,41 +14,35 @@ export default function Recursos() {
   const { t } = useLanguage()
 
   return (
-    <section id="recursos" className="py-16 px-6 max-w-7xl mx-auto border-t border-zinc-800/50 scroll-mt-24">
+    <section id="recursos" className="py-24 px-6 max-w-7xl mx-auto scroll-mt-20">
+      <SectionHeading eyebrow="04 · Formación" title={t('recursosTitle')} subtitle={t('recursosSubtitle')} />
+
+      {/* Featured: playgrounds portal — aurora gradient border */}
       <motion.div
         initial={{ opacity: 0, y: 16 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
+        className="mb-6 rounded-3xl bg-gradient-to-r from-indigo-500/60 via-fuchsia-500/60 to-rose-500/60 p-px glow-ring"
       >
-        <h2 className="text-3xl font-bold text-zinc-100 mb-2">{t('recursosTitle')}</h2>
-        <p className="text-zinc-400 mb-8">{t('recursosSubtitle')}</p>
-      </motion.div>
-
-      {/* Featured: playgrounds portal */}
-      <motion.a
-        href="https://ml-ai-portal.vercel.app"
-        target="_blank"
-        rel="noopener noreferrer"
-        initial={{ opacity: 0, y: 16 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
-        className="group block rounded-2xl border border-emerald-500/40 bg-emerald-500/5 p-7 mb-6 hover:border-emerald-500/60 transition-colors"
-      >
-        <div className="flex flex-col sm:flex-row sm:items-center gap-5">
-          <div className="w-14 h-14 shrink-0 rounded-xl bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center">
-            <PlayCircle className="w-7 h-7 text-emerald-400" />
+        <a
+          href="https://ml-ai-portal.vercel.app"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group flex flex-col gap-5 rounded-3xl bg-zinc-950 p-8 sm:flex-row sm:items-center"
+        >
+          <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-fuchsia-500/30 bg-fuchsia-500/10">
+            <PlayCircle className="h-7 w-7 text-fuchsia-300" />
           </div>
           <div className="flex-1">
-            <h3 className="text-xl font-semibold text-zinc-100 mb-1.5">{t('recursosPlaygroundTitle')}</h3>
-            <p className="text-sm text-zinc-400 leading-relaxed max-w-2xl">{t('recursosPlaygroundDesc')}</p>
+            <h3 className="font-display text-xl font-semibold text-zinc-100 mb-1.5">{t('recursosPlaygroundTitle')}</h3>
+            <p className="max-w-2xl text-sm leading-relaxed text-zinc-400">{t('recursosPlaygroundDesc')}</p>
           </div>
-          <span className="inline-flex items-center gap-1.5 text-emerald-400 font-medium text-sm whitespace-nowrap group-hover:gap-2.5 transition-all">
-            {t('recursosPlaygroundCta')} <ArrowRight className="w-4 h-4" />
+          <span className="inline-flex items-center gap-1.5 whitespace-nowrap text-sm font-medium text-fuchsia-300 transition-all group-hover:gap-2.5">
+            {t('recursosPlaygroundCta')} <ArrowRight className="h-4 w-4" />
           </span>
-        </div>
-      </motion.a>
+        </a>
+      </motion.div>
 
       {/* Other resources */}
       <div className="grid gap-5 sm:grid-cols-3">
@@ -58,12 +53,12 @@ export default function Recursos() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: i * 0.08 }}
-            className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6"
+            className="rounded-2xl border border-zinc-800/80 bg-zinc-900/30 p-6 transition-colors hover:border-zinc-700"
           >
-            <div className="w-10 h-10 rounded-lg bg-zinc-800/60 border border-zinc-700 flex items-center justify-center mb-4">
-              <Icon className="w-5 h-5 text-zinc-300" />
+            <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5">
+              <Icon className="h-5 w-5 text-zinc-300" />
             </div>
-            <h3 className="text-base font-semibold text-zinc-100 mb-1.5">{t(`${key}Title`)}</h3>
+            <h3 className="font-display text-base font-semibold text-zinc-100 mb-1.5">{t(`${key}Title`)}</h3>
             <p className="text-sm text-zinc-400 leading-relaxed">{t(`${key}Desc`)}</p>
           </motion.div>
         ))}

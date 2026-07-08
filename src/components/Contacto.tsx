@@ -2,6 +2,7 @@
 import { motion } from 'motion/react'
 import { Mail, BellRing } from 'lucide-react'
 import { useLanguage } from '../context/LanguageContext'
+import SectionHeading from './SectionHeading'
 
 const EMAIL = 'daviddiazsolis@gmail.com'
 
@@ -9,16 +10,8 @@ export default function Contacto() {
   const { t } = useLanguage()
 
   return (
-    <section id="contacto" className="py-16 px-6 max-w-7xl mx-auto border-t border-zinc-800/50 scroll-mt-24">
-      <motion.div
-        initial={{ opacity: 0, y: 16 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
-      >
-        <h2 className="text-3xl font-bold text-zinc-100 mb-2">{t('contactoTitle')}</h2>
-        <p className="text-zinc-400 mb-8">{t('contactoSubtitle')}</p>
-      </motion.div>
+    <section id="contacto" className="py-24 px-6 max-w-7xl mx-auto scroll-mt-20">
+      <SectionHeading eyebrow="08 · Contacto" title={t('contactoTitle')} subtitle={t('contactoSubtitle')} />
 
       <div className="grid gap-5 sm:grid-cols-2">
         {/* Email */}
@@ -27,18 +20,20 @@ export default function Contacto() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.4 }}
-          className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6 flex flex-col"
+          className="flex flex-col rounded-2xl border border-zinc-800/80 bg-zinc-900/30 p-7"
         >
-          <div className="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mb-4">
-            <Mail className="w-5 h-5 text-emerald-400" />
+          <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl border border-fuchsia-500/30 bg-fuchsia-500/10">
+            <Mail className="h-5 w-5 text-fuchsia-300" />
           </div>
-          <p className="text-sm text-zinc-400 mb-1">{EMAIL}</p>
+          <p className="mb-1 text-sm text-zinc-400">{EMAIL}</p>
           <div className="flex-1" />
           <a
             href={`mailto:${EMAIL}?subject=Observatorio%20de%20IA%20%26%20Innovaci%C3%B3n`}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500 text-zinc-950 font-medium text-sm hover:bg-emerald-400 transition-colors self-start mt-2"
+            className="btn-gradient mt-3 self-start"
           >
-            <Mail className="w-4 h-4" /> {t('contactoEmailCta')}
+            <span>
+              <Mail className="h-4 w-4" /> {t('contactoEmailCta')}
+            </span>
           </a>
         </motion.div>
 
@@ -48,18 +43,18 @@ export default function Contacto() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.4, delay: 0.08 }}
-          className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6 flex flex-col"
+          className="flex flex-col rounded-2xl border border-zinc-800/80 bg-zinc-900/30 p-7"
         >
-          <div className="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mb-4">
-            <BellRing className="w-5 h-5 text-emerald-400" />
+          <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5">
+            <BellRing className="h-5 w-5 text-fuchsia-300" />
           </div>
-          <h3 className="text-base font-semibold text-zinc-100 mb-1.5">{t('contactoNewsletterTitle')}</h3>
-          <p className="text-sm text-zinc-400 leading-relaxed mb-4 flex-1">{t('contactoNewsletterDesc')}</p>
+          <h3 className="font-display text-base font-semibold text-zinc-100 mb-1.5">{t('contactoNewsletterTitle')}</h3>
+          <p className="mb-4 flex-1 text-sm leading-relaxed text-zinc-400">{t('contactoNewsletterDesc')}</p>
           <a
             href={`mailto:${EMAIL}?subject=Suscripci%C3%B3n%20Observatorio%20IA&body=Quiero%20recibir%20novedades%20del%20Observatorio%20de%20IA%20%26%20Innovaci%C3%B3n.`}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-zinc-700 text-zinc-200 font-medium text-sm hover:border-zinc-500 transition-colors self-start"
+            className="inline-flex items-center gap-2 self-start rounded-full border border-white/15 px-5 py-2.5 text-sm font-medium text-zinc-200 transition-colors hover:border-white/30 hover:text-white"
           >
-            <BellRing className="w-4 h-4" /> {t('contactoNewsletterCta')}
+            <BellRing className="h-4 w-4" /> {t('contactoNewsletterCta')}
           </a>
         </motion.div>
       </div>

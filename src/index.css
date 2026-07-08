@@ -8,13 +8,23 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Display font for headings — modern grotesk (Enter/Converge-style) */
+.font-display {
+  font-family: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: -0.02em;
+}
+
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #18181b;
+  background: #09090b;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -29,6 +39,54 @@ html {
 /* Hide horizontal scrollbar on the sticky section nav */
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* ── Aurora / accent helpers ─────────────────────────────────────────────── */
+
+/* Gradient text (violet → fuchsia → rose) for hero keywords */
+.text-aurora {
+  background-image: linear-gradient(100deg, #a78bfa 0%, #e879f9 45%, #fb7185 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Short gradient "eyebrow" line above section headings */
+.eyebrow-line {
+  display: inline-block;
+  height: 2px;
+  width: 2.75rem;
+  border-radius: 9999px;
+  background-image: linear-gradient(90deg, #8b5cf6, #f43f5e);
+}
+
+/* Glowing gradient-bordered CTA button */
+.btn-gradient {
+  position: relative;
+  border-radius: 9999px;
+  background-image: linear-gradient(100deg, #8b5cf6, #e879f9 55%, #fb7185);
+  padding: 1px;
+  box-shadow: 0 0 32px -8px rgba(232, 121, 249, 0.55);
+  transition: box-shadow 0.25s ease, transform 0.2s ease;
+}
+.btn-gradient:hover {
+  box-shadow: 0 0 40px -6px rgba(232, 121, 249, 0.7);
+  transform: translateY(-1px);
+}
+.btn-gradient > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  background: #0a0a0c;
+  padding: 0.6rem 1.25rem;
+  font-weight: 500;
+  color: #fafafa;
+}
+
+/* Subtle glow ring for featured cards */
+.glow-ring {
+  box-shadow: 0 0 60px -20px rgba(168, 85, 247, 0.45);
+}
 
 /* ── Light / presentation mode ──────────────────────────────────────────────
    Inverts the zinc palette — zinc-950 (darkest bg) → zinc-50 (lightest), etc.
@@ -50,3 +108,6 @@ html.light {
 html.light ::-webkit-scrollbar-track  { background: #f4f4f5; }
 html.light ::-webkit-scrollbar-thumb  { background: #d4d4d8; border-radius: 3px; }
 html.light ::-webkit-scrollbar-thumb:hover { background: #a1a1aa; }
+
+/* In light mode the gradient CTA keeps a light inner surface */
+html.light .btn-gradient > span { background: #fafafa; color: #18181b; }

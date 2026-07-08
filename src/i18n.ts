@@ -21,6 +21,8 @@ export const translations: Record<Language, TranslationMap> = {
     // ── Hero ─────────────────────────────────────────────────
     heroBadge: 'FEN · Facultad de Economía y Negocios',
     heroTitle: 'Observatorio de IA & Innovación',
+    heroTitleA: 'Observatorio de',
+    heroTitleB: 'IA & Innovación',
     heroSubtitle: 'Comprender, formar y divulgar el impacto de la inteligencia artificial.',
     heroDesc:
       'Un espacio académico dedicado a monitorear el avance de la inteligencia artificial y la innovación, y a traducirlo en formación y divulgación para la comunidad universitaria, el sector público y la sociedad.',
@@ -151,6 +153,8 @@ export const translations: Record<Language, TranslationMap> = {
     // ── Hero ─────────────────────────────────────────────────
     heroBadge: 'FEN · School of Economics & Business',
     heroTitle: 'AI & Innovation Observatory',
+    heroTitleA: 'AI & Innovation',
+    heroTitleB: 'Observatory',
     heroSubtitle: 'Understanding, teaching and communicating the impact of artificial intelligence.',
     heroDesc:
       'An academic space devoted to monitoring the advance of artificial intelligence and innovation, and turning it into education and outreach for the university community, the public sector and society.',

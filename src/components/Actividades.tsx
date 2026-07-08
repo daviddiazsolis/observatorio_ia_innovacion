@@ -2,6 +2,7 @@
 import { motion } from 'motion/react'
 import { Calendar, Presentation, Wrench, Mic } from 'lucide-react'
 import { useLanguage } from '../context/LanguageContext'
+import SectionHeading from './SectionHeading'
 
 const ACTIVITIES = [
   { key: 'act1', icon: Presentation },
@@ -13,16 +14,8 @@ export default function Actividades() {
   const { t } = useLanguage()
 
   return (
-    <section id="actividades" className="py-16 px-6 max-w-7xl mx-auto border-t border-zinc-800/50 scroll-mt-24">
-      <motion.div
-        initial={{ opacity: 0, y: 16 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
-      >
-        <h2 className="text-3xl font-bold text-zinc-100 mb-2">{t('actividadesTitle')}</h2>
-        <p className="text-zinc-400 mb-8">{t('actividadesSubtitle')}</p>
-      </motion.div>
+    <section id="actividades" className="py-24 px-6 max-w-7xl mx-auto scroll-mt-20">
+      <SectionHeading eyebrow="06 · Agenda" title={t('actividadesTitle')} subtitle={t('actividadesSubtitle')} />
 
       <div className="grid gap-5 sm:grid-cols-3">
         {ACTIVITIES.map(({ key, icon: Icon }, i) => (
@@ -32,26 +25,26 @@ export default function Actividades() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: i * 0.08 }}
-            className="rounded-2xl border border-zinc-800 bg-zinc-900/40 p-6 flex flex-col"
+            className="flex flex-col rounded-2xl border border-zinc-800/80 bg-zinc-900/30 p-6 transition-colors hover:border-zinc-700"
           >
-            <div className="flex items-center justify-between mb-4">
-              <div className="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center">
-                <Icon className="w-5 h-5 text-emerald-400" />
+            <div className="mb-4 flex items-center justify-between">
+              <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5">
+                <Icon className="h-5 w-5 text-fuchsia-300" />
               </div>
-              <span className="text-xs font-medium px-2 py-0.5 rounded-full bg-zinc-800 text-zinc-300 border border-zinc-700">
+              <span className="rounded-full border border-zinc-700 bg-zinc-800/60 px-2.5 py-0.5 text-xs font-medium text-zinc-300">
                 {t(`${key}Type`)}
               </span>
             </div>
-            <h3 className="text-base font-semibold text-zinc-100 mb-1.5">{t(`${key}Title`)}</h3>
-            <p className="text-sm text-zinc-400 leading-relaxed mb-4 flex-1">{t(`${key}Desc`)}</p>
+            <h3 className="font-display text-base font-semibold text-zinc-100 mb-1.5">{t(`${key}Title`)}</h3>
+            <p className="mb-4 flex-1 text-sm leading-relaxed text-zinc-400">{t(`${key}Desc`)}</p>
             <p className="inline-flex items-center gap-1.5 text-xs text-zinc-500">
-              <Calendar className="w-3.5 h-3.5" /> {t(`${key}Date`)}
+              <Calendar className="h-3.5 w-3.5" /> {t(`${key}Date`)}
             </p>
           </motion.div>
         ))}
       </div>
 
-      <p className="text-sm text-zinc-500 mt-6">{t('actSoon')}</p>
+      <p className="mt-6 text-sm text-zinc-500">{t('actSoon')}</p>
     </section>
   )
 }
