@@ -28,7 +28,7 @@ export default function Ejes() {
             transition={{ duration: 0.4, delay: i * 0.08 }}
             className={`rounded-2xl border p-7 transition-colors ${
               featured
-                ? 'border-fuchsia-500/30 bg-fuchsia-500/[0.04] glow-ring'
+                ? 'border-blue-500/30 bg-blue-500/[0.04] glow-ring'
                 : 'border-zinc-800/80 bg-zinc-900/30 hover:border-zinc-700'
             }`}
           >
@@ -36,14 +36,14 @@ export default function Ejes() {
               <div
                 className={`flex h-11 w-11 items-center justify-center rounded-xl border ${
                   featured
-                    ? 'border-fuchsia-500/30 bg-fuchsia-500/10'
+                    ? 'border-blue-500/30 bg-blue-500/10'
                     : 'border-white/10 bg-white/5'
                 }`}
               >
-                <Icon className={`h-5 w-5 ${featured ? 'text-fuchsia-300' : 'text-zinc-300'}`} />
+                <Icon className={`h-5 w-5 ${featured ? 'text-blue-300' : 'text-zinc-300'}`} />
               </div>
               {featured && (
-                <span className="rounded-full border border-fuchsia-500/30 bg-fuchsia-500/10 px-2.5 py-0.5 text-xs font-medium text-fuchsia-200">
+                <span className="rounded-full border border-blue-500/30 bg-blue-500/10 px-2.5 py-0.5 text-xs font-medium text-blue-200">
                   {t('eje1Featured')}
                 </span>
               )}

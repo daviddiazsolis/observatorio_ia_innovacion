@@ -13,12 +13,12 @@ export default function Hero() {
     <section className="relative isolate overflow-hidden bg-[#0a0a0c] px-6 pt-32 pb-24 sm:pt-40 sm:pb-32">
       {/* ── Aurora background ─────────────────────────────────────── */}
       <div className="pointer-events-none absolute inset-0 -z-10">
-        {/* violet blob, upper-left */}
-        <div className="absolute -top-40 -left-24 h-[38rem] w-[38rem] rounded-full bg-indigo-600/25 blur-[120px]" />
-        {/* rose blob, upper-right */}
-        <div className="absolute -top-40 -right-24 h-[38rem] w-[38rem] rounded-full bg-rose-600/20 blur-[120px]" />
-        {/* fuchsia center glow */}
-        <div className="absolute top-0 left-1/2 h-[26rem] w-[48rem] -translate-x-1/2 rounded-full bg-fuchsia-600/15 blur-[130px]" />
+        {/* navy blob, upper-left */}
+        <div className="absolute -top-40 -left-24 h-[38rem] w-[38rem] rounded-full bg-blue-800/30 blur-[120px]" />
+        {/* azure blob, upper-right */}
+        <div className="absolute -top-40 -right-24 h-[38rem] w-[38rem] rounded-full bg-sky-600/20 blur-[120px]" />
+        {/* royal-blue center glow */}
+        <div className="absolute top-0 left-1/2 h-[26rem] w-[48rem] -translate-x-1/2 rounded-full bg-blue-600/20 blur-[130px]" />
         {/* faint dot grid */}
         <div className="absolute inset-0 bg-[radial-gradient(#ffffff10_1px,transparent_1px)] bg-[size:26px_26px] [mask-image:radial-gradient(ellipse_at_center,black,transparent_75%)]" />
       </div>
@@ -31,7 +31,7 @@ export default function Hero() {
         >
           {/* Badge */}
           <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-medium text-zinc-300 backdrop-blur">
-            <span className="h-1.5 w-1.5 rounded-full bg-fuchsia-400" />
+            <span className="h-1.5 w-1.5 rounded-full bg-blue-400" />
             {t('heroBadge')}
           </div>
 

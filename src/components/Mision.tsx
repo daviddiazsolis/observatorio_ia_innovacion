@@ -38,7 +38,7 @@ export default function Mision() {
             className="rounded-2xl border border-zinc-800/80 bg-zinc-900/30 p-6 transition-colors hover:border-zinc-700"
           >
             <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5">
-              <Icon className="h-5 w-5 text-fuchsia-300" />
+              <Icon className="h-5 w-5 text-blue-300" />
             </div>
             <h3 className="font-display text-lg font-semibold text-zinc-100 mb-1.5">{t(`${key}Title`)}</h3>
             <p className="text-sm text-zinc-400 leading-relaxed">{t(`${key}Desc`)}</p>

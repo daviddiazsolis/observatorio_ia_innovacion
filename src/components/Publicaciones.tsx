@@ -21,14 +21,14 @@ export default function Publicaciones() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.4 }}
-          className="group flex flex-col rounded-2xl border border-zinc-800/80 bg-zinc-900/30 p-7 transition-colors hover:border-fuchsia-500/40"
+          className="group flex flex-col rounded-2xl border border-zinc-800/80 bg-zinc-900/30 p-7 transition-colors hover:border-blue-500/40"
         >
-          <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl border border-fuchsia-500/30 bg-fuchsia-500/10">
-            <FileText className="h-5 w-5 text-fuchsia-300" />
+          <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl border border-blue-500/30 bg-blue-500/10">
+            <FileText className="h-5 w-5 text-blue-300" />
           </div>
           <h3 className="font-display text-lg font-semibold text-zinc-100 mb-1.5">{t('pubIliaTitle')}</h3>
           <p className="mb-4 flex-1 text-sm leading-relaxed text-zinc-400">{t('pubIliaDesc')}</p>
-          <span className="inline-flex items-center gap-1.5 text-sm font-medium text-fuchsia-300 transition-all group-hover:gap-2.5">
+          <span className="inline-flex items-center gap-1.5 text-sm font-medium text-blue-300 transition-all group-hover:gap-2.5">
             {t('pubIliaCta')} <ExternalLink className="h-3.5 w-3.5" />
           </span>
         </motion.a>

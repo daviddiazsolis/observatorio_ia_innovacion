@@ -29,7 +29,7 @@ export default function Actividades() {
           >
             <div className="mb-4 flex items-center justify-between">
               <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5">
-                <Icon className="h-5 w-5 text-fuchsia-300" />
+                <Icon className="h-5 w-5 text-blue-300" />
               </div>
               <span className="rounded-full border border-zinc-700 bg-zinc-800/60 px-2.5 py-0.5 text-xs font-medium text-zinc-300">
                 {t(`${key}Type`)}

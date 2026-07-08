@@ -64,8 +64,8 @@ export default function EstadoIA() {
             <BarChart data={chartData} margin={{ top: 4, right: 16, bottom: 4, left: 0 }}>
               <defs>
                 <linearGradient id="barAurora" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stopColor="#e879f9" />
-                  <stop offset="100%" stopColor="#8b5cf6" />
+                  <stop offset="0%" stopColor="#60a5fa" />
+                  <stop offset="100%" stopColor="#1d4ed8" />
                 </linearGradient>
               </defs>
               <CartesianGrid strokeDasharray="3 3" stroke="#3f3f4640" vertical={false} />
@@ -83,7 +83,7 @@ export default function EstadoIA() {
               />
               <Bar dataKey="score" radius={[6, 6, 0, 0]} maxBarSize={72}>
                 {chartData.map((_, i) => (
-                  <Cell key={i} fill={i === 0 ? 'url(#barAurora)' : '#a78bfa66'} />
+                  <Cell key={i} fill={i === 0 ? 'url(#barAurora)' : '#60a5fa66'} />
                 ))}
               </Bar>
             </BarChart>
@@ -99,7 +99,7 @@ export default function EstadoIA() {
           href={iliaMeta.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-1 text-fuchsia-400 hover:text-fuchsia-300"
+          className="inline-flex items-center gap-1 text-blue-400 hover:text-blue-300"
         >
           {t('estadoSourceCta')} <ExternalLink className="h-3 w-3" />
         </a>

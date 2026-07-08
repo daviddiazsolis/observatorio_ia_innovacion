@@ -54,7 +54,7 @@ function SectionNav() {
             onClick={e => { e.preventDefault(); document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' }) }}
             className={`px-3.5 py-1.5 rounded-full text-sm font-medium whitespace-nowrap transition-colors ${
               active === id
-                ? 'bg-white/10 text-white border border-white/15'
+                ? 'bg-blue-500/15 text-blue-200 border border-blue-500/30'
                 : 'text-zinc-500 hover:text-zinc-200'
             }`}
           >

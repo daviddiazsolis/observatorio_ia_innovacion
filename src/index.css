@@ -9,13 +9,13 @@ html {
 }
 
 body {
-  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-family: "Roboto", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
-/* Display font for headings — modern grotesk (Enter/Converge-style) */
+/* Display font for headings — Roboto Slab (FEN UChile institutional identity) */
 .font-display {
-  font-family: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
-  letter-spacing: -0.02em;
+  font-family: "Roboto Slab", Georgia, "Times New Roman", serif;
+  letter-spacing: -0.01em;
 }
 
 ::-webkit-scrollbar {
@@ -42,9 +42,9 @@ body {
 
 /* ── Aurora / accent helpers ─────────────────────────────────────────────── */
 
-/* Gradient text (violet → fuchsia → rose) for hero keywords */
+/* Gradient text (azure → royal → navy blue, FEN institutional) for hero keywords */
 .text-aurora {
-  background-image: linear-gradient(100deg, #a78bfa 0%, #e879f9 45%, #fb7185 100%);
+  background-image: linear-gradient(100deg, #7db1ff 0%, #2563eb 55%, #1d4ed8 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -56,20 +56,20 @@ body {
   height: 2px;
   width: 2.75rem;
   border-radius: 9999px;
-  background-image: linear-gradient(90deg, #8b5cf6, #f43f5e);
+  background-image: linear-gradient(90deg, #0034d9, #60a5fa);
 }
 
 /* Glowing gradient-bordered CTA button */
 .btn-gradient {
   position: relative;
   border-radius: 9999px;
-  background-image: linear-gradient(100deg, #8b5cf6, #e879f9 55%, #fb7185);
+  background-image: linear-gradient(100deg, #1d4ed8, #2563eb 55%, #60a5fa);
   padding: 1px;
-  box-shadow: 0 0 32px -8px rgba(232, 121, 249, 0.55);
+  box-shadow: 0 0 32px -8px rgba(37, 99, 235, 0.6);
   transition: box-shadow 0.25s ease, transform 0.2s ease;
 }
 .btn-gradient:hover {
-  box-shadow: 0 0 40px -6px rgba(232, 121, 249, 0.7);
+  box-shadow: 0 0 40px -6px rgba(37, 99, 235, 0.75);
   transform: translateY(-1px);
 }
 .btn-gradient > span {
@@ -85,7 +85,7 @@ body {
 
 /* Subtle glow ring for featured cards */
 .glow-ring {
-  box-shadow: 0 0 60px -20px rgba(168, 85, 247, 0.45);
+  box-shadow: 0 0 60px -20px rgba(37, 99, 235, 0.5);
 }
 
 /* ── Light / presentation mode ──────────────────────────────────────────────

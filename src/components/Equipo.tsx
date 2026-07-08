@@ -21,12 +21,12 @@ export default function Equipo() {
           className="rounded-2xl border border-zinc-800/80 bg-zinc-900/30 p-7"
         >
           <div className="mb-4 flex items-center gap-4">
-            <div className="flex h-16 w-16 items-center justify-center rounded-full border border-fuchsia-500/30 bg-fuchsia-500/10">
-              <UserRound className="h-8 w-8 text-fuchsia-300" />
+            <div className="flex h-16 w-16 items-center justify-center rounded-full border border-blue-500/30 bg-blue-500/10">
+              <UserRound className="h-8 w-8 text-blue-300" />
             </div>
             <div>
               <h3 className="font-display text-lg font-semibold text-zinc-100">{t('directorName')}</h3>
-              <p className="text-sm text-fuchsia-300">{t('directorRole')}</p>
+              <p className="text-sm text-blue-300">{t('directorRole')}</p>
             </div>
           </div>
           <p className="mb-4 text-sm leading-relaxed text-zinc-400">{t('directorBio')}</p>

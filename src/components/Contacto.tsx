@@ -22,8 +22,8 @@ export default function Contacto() {
           transition={{ duration: 0.4 }}
           className="flex flex-col rounded-2xl border border-zinc-800/80 bg-zinc-900/30 p-7"
         >
-          <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl border border-fuchsia-500/30 bg-fuchsia-500/10">
-            <Mail className="h-5 w-5 text-fuchsia-300" />
+          <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl border border-blue-500/30 bg-blue-500/10">
+            <Mail className="h-5 w-5 text-blue-300" />
           </div>
           <p className="mb-1 text-sm text-zinc-400">{EMAIL}</p>
           <div className="flex-1" />
@@ -46,7 +46,7 @@ export default function Contacto() {
           className="flex flex-col rounded-2xl border border-zinc-800/80 bg-zinc-900/30 p-7"
         >
           <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5">
-            <BellRing className="h-5 w-5 text-fuchsia-300" />
+            <BellRing className="h-5 w-5 text-blue-300" />
           </div>
           <h3 className="font-display text-base font-semibold text-zinc-100 mb-1.5">{t('contactoNewsletterTitle')}</h3>
           <p className="mb-4 flex-1 text-sm leading-relaxed text-zinc-400">{t('contactoNewsletterDesc')}</p>

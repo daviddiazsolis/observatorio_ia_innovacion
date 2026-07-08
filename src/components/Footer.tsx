@@ -7,7 +7,7 @@ export default function Footer() {
 
   return (
     <footer className="relative overflow-hidden border-t border-zinc-800 bg-zinc-950 py-12">
-      <div className="pointer-events-none absolute -bottom-32 left-1/2 h-64 w-[40rem] -translate-x-1/2 rounded-full bg-fuchsia-600/10 blur-[120px]" />
+      <div className="pointer-events-none absolute -bottom-32 left-1/2 h-64 w-[40rem] -translate-x-1/2 rounded-full bg-blue-600/10 blur-[120px]" />
       <div className="relative mx-auto flex max-w-7xl flex-col items-center gap-3 px-6 text-center">
         <p className="font-display text-lg font-semibold text-zinc-100">{t('footerObs')}</p>
         <p className="text-sm text-zinc-500">{t('footerAffiliation')}</p>

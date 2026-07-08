@@ -19,7 +19,7 @@ export const translations: Record<Language, TranslationMap> = {
     navContacto: 'Contacto',
 
     // ── Hero ─────────────────────────────────────────────────
-    heroBadge: 'FEN · Facultad de Economía y Negocios',
+    heroBadge: 'FEN UChile · Departamento de Administración',
     heroTitle: 'Observatorio de IA & Innovación',
     heroTitleA: 'Observatorio de',
     heroTitleB: 'IA & Innovación',
@@ -129,7 +129,7 @@ export const translations: Record<Language, TranslationMap> = {
 
     // ── Footer ───────────────────────────────────────────────
     footerObs: 'Observatorio de IA & Innovación',
-    footerAffiliation: 'Facultad de Economía y Negocios',
+    footerAffiliation: 'Departamento de Administración · Facultad de Economía y Negocios, U. de Chile',
     footerPortalCta: 'Portal de aprendizaje',
     footerRights: 'Recursos educativos de libre acceso.',
     footerBuiltBy: 'Dirigido por',
@@ -151,7 +151,7 @@ export const translations: Record<Language, TranslationMap> = {
     navContacto: 'Contact',
 
     // ── Hero ─────────────────────────────────────────────────
-    heroBadge: 'FEN · School of Economics & Business',
+    heroBadge: 'FEN UChile · Department of Management',
     heroTitle: 'AI & Innovation Observatory',
     heroTitleA: 'AI & Innovation',
     heroTitleB: 'Observatory',
@@ -261,7 +261,7 @@ export const translations: Record<Language, TranslationMap> = {
 
     // ── Footer ───────────────────────────────────────────────
     footerObs: 'AI & Innovation Observatory',
-    footerAffiliation: 'School of Economics & Business',
+    footerAffiliation: 'Department of Management · School of Economics & Business, University of Chile',
     footerPortalCta: 'Learning hub',
     footerRights: 'Open-access educational resources.',
     footerBuiltBy: 'Directed by',
