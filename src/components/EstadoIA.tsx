@@ -83,7 +83,7 @@ export default function EstadoIA() {
               />
               <Bar dataKey="score" radius={[6, 6, 0, 0]} maxBarSize={72}>
                 {chartData.map((_, i) => (
-                  <Cell key={i} fill={i === 0 ? 'url(#barAurora)' : '#60a5fa66'} />
+                  <Cell key={i} fill={i === 0 ? 'url(#barAurora)' : '#60a5facc'} />
                 ))}
               </Bar>
             </BarChart>

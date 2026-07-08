@@ -12,7 +12,7 @@ const ThemeContext = createContext<ThemeContextType | null>(null)
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<Theme>(() => {
-    return (localStorage.getItem('observatorio-theme') as Theme) || 'dark'
+    return (localStorage.getItem('observatorio-theme') as Theme) || 'light'
   })
 
   useEffect(() => {

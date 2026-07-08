@@ -30,7 +30,7 @@ export default function Hero() {
           transition={{ duration: 0.6 }}
         >
           {/* Badge */}
-          <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-medium text-zinc-300 backdrop-blur">
+          <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-medium text-white/75 backdrop-blur">
             <span className="h-1.5 w-1.5 rounded-full bg-blue-400" />
             {t('heroBadge')}
           </div>
@@ -39,7 +39,7 @@ export default function Hero() {
             {t('heroTitleA')} <span className="text-aurora">{t('heroTitleB')}</span>
           </h1>
 
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-zinc-400 sm:text-xl">
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/70 sm:text-xl">
             {t('heroDesc')}
           </p>
 
@@ -55,7 +55,7 @@ export default function Hero() {
             </button>
             <button
               onClick={() => scrollTo('estado')}
-              className="inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-2.5 font-medium text-zinc-200 transition-colors hover:border-white/30 hover:text-white"
+              className="inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-2.5 font-medium text-white/90 transition-colors hover:border-white/30 hover:text-white"
             >
               <BarChart3 className="h-4 w-4" /> {t('heroCta2')}
             </button>
