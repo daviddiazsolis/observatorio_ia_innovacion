@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: Apache-2.0
 import { motion } from 'motion/react'
-import { ArrowRight, BarChart3 } from 'lucide-react'
+import { ArrowRight, BarChart3, ArrowUpRight } from 'lucide-react'
 import { useLanguage } from '../context/LanguageContext'
 
 export default function Hero() {
@@ -29,11 +29,17 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          {/* Badge */}
-          <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-medium text-white/75 backdrop-blur">
-            <span className="h-1.5 w-1.5 rounded-full bg-blue-400" />
+          {/* Badge — links to the FEN Departamento de Administración */}
+          <a
+            href="https://negocios.uchile.cl/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group mb-8 inline-flex items-center gap-2.5 rounded-full border border-white/15 bg-white/5 px-5 py-2.5 text-sm font-medium text-white/90 backdrop-blur transition-colors hover:border-white/30 hover:bg-white/10"
+          >
+            <span className="h-2 w-2 rounded-full bg-blue-400" />
             {t('heroBadge')}
-          </div>
+            <ArrowUpRight className="h-4 w-4 text-white/60 transition-colors group-hover:text-white/90" />
+          </a>
 
           <h1 className="font-display text-5xl font-semibold leading-[1.05] tracking-tight text-white sm:text-7xl">
             {t('heroTitleA')} <span className="text-aurora">{t('heroTitleB')}</span>
